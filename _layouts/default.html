@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{page.title}} | {{site.name}}</title>
+    {% seo %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/prism.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css" />
+    <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- defer loading of font and font awesome -->
+    <noscript id="deferred-styles">
+      <link
+        href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous"
+      />
+    </noscript>
+
+    <!-- Begin Sidebar Navigation -->
+    <!-- ================================== -->
+    <div class="sidebar"></div>
+    <div class="nav-icon">
+      <div class="hamburger-bar"></div>
+    </div>
+    <div id="blackover-nav" class="blackover"></div>
+    <nav id="menu">
+      <ul>
+        <h3>Navigation</h3>
+        <li>
+          <a href="{{ site.baseurl }}/">Home</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/about"
+            >About
+            <span class="badge badge-primary">Memoirs</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
