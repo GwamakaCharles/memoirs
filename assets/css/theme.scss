@@ -13,6 +13,7 @@ $enable-rounded: false;
 @import "bootstrap/mixins";
 @import "bootstrap/bootstrap";
 @import "stars";
+@import "minima";
 
 // general
 body,
@@ -23,6 +24,7 @@ optgroup,
 textarea {
   font-family: Sen;
 }
+
 body {
   line-height: 1.7;
   background: #f4f4f4;

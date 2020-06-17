@@ -10,6 +10,37 @@
     <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
   </head>
 
+  {% if jekyll.environment == 'production' %}
+  <!-- change your GA id in _config.yml -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "//www.google-analytics.com/analytics.js",
+      "ga"
+    );
+    ga("create", "{{site.google_analytics}}", "auto");
+    ga("send", "pageview");
+  </script>
+  {% endif %} 
+  {% capture layout %} 
+  {% if page.layout %} 
+  layout-{{ page.layout }}
+  {% endif %} {% endcapture %}
+
   <body>
     <!-- defer loading of font and font awesome -->
     <noscript id="deferred-styles">
@@ -129,8 +160,8 @@
               Copyright © {{ site.time | date: '%Y'}} {{ site.name }}
             </div>
             <div class="col-md-6 col-sm-12 text-center text-lg-right">
-              <a href="#" target="_blank">Jekyll Memoirs Collection</a>
-              by wowthemes.net
+              <a href="https://gwamakacharles.github.io/my-personal-site/" target="_blank">This is just my website</a>
+              by gwamakacharles
             </div>
           </div>
         </div>
@@ -146,8 +177,7 @@
 
     {% if site.lazyimages == 'enabled' %}
     <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
-    {% endif %} 
-    {% if page.layout == 'post' %}
+    {% endif %} {% if page.layout == 'post' %}
     <script
       id="dsq-count-scr"
       src="//{{site.disqus}}.disqus.com/count.js"
