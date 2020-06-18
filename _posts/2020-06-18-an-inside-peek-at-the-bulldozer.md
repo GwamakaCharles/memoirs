@@ -2,7 +2,7 @@
 layout: blog
 title: AN INSIDE PEEK AT THE BULLDOZER
 date: 2020-06-18T12:55:21.513Z
-thumbnail: /images/uploads/bulldozer-engine-equipment-heavy-416988-min.jpg
+thumbnail: /images/uploads/screen-shot-2020-05-14-at-16.22.20.png
 rating: 4
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare aenean euismod elementum nisi quis eleifend quam. Pellentesque diam volutpat commodo sed egestas. Elit at imperdiet dui accumsan sit amet nulla facilisi. 
