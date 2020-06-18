@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/prism.css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css" />
     <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
 
   {% if jekyll.environment == 'production' %}
@@ -35,10 +36,7 @@
     ga("create", "{{site.google_analytics}}", "auto");
     ga("send", "pageview");
   </script>
-  {% endif %} 
-  {% capture layout %} 
-  {% if page.layout %} 
-  layout-{{ page.layout }}
+  {% endif %} {% capture layout %} {% if page.layout %} layout-{{ page.layout }}
   {% endif %} {% endcapture %}
 
   <body>
@@ -160,7 +158,11 @@
               Copyright © {{ site.time | date: '%Y'}} {{ site.name }}
             </div>
             <div class="col-md-6 col-sm-12 text-center text-lg-right">
-              <a href="https://gwamakacharles.github.io/my-personal-site/" target="_blank">This is just my website</a>
+              <a
+                href="https://gwamakacharles.github.io/my-personal-site/"
+                target="_blank"
+                >This is just my website</a
+              >
               by gwamakacharles
             </div>
           </div>
@@ -183,5 +185,16 @@
       src="//{{site.disqus}}.disqus.com/count.js"
     ></script>
     {% endif %}
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
