@@ -23,6 +23,20 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css" />
     <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- MailChimp integration script -->
+    <script id="mcjs">
+      !(function (c, h, i, m, p) {
+        (m = c.createElement(h)),
+          (p = c.getElementsByTagName(h)[0]),
+          (m.async = 1),
+          (m.src = i),
+          p.parentNode.insertBefore(m, p);
+      })(
+        document,
+        "script",
+        "https://chimpstatic.com/mcjs-connected/js/users/4de247e978cab0e1532f96492/30a30e070f842a32b68624395.js"
+      );
+    </script>
   </head>
 
   {% if jekyll.environment == 'production' %}
